@@ -8,8 +8,6 @@ public class CalculatorTest {
 
         MyCalculator calculator = new MyCalculator();
 
-        Double result = calculator.multiply(3,3);
-
-        Assertions.assertEquals(9,calculator.multiply(3,3),"should return 9");
+        Assertions.assertEquals(9.0,calculator.multiply(3,3),"jesus christ, this should return 9!");
     }
 }
