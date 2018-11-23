@@ -1,12 +1,13 @@
+import java.util.Arrays;
 
 public class MyCalculator {
 
     public double multiply(double a, double b){
-        return 0.0;
+        return a*b;
     }
 
     public double add (double ... args){
 
-        return 0;
+        return Arrays.stream(args).sum();
     }
 }
