@@ -7,6 +7,7 @@
     <groupId>com.matmazur</groupId>
     <artifactId>testing-recap</artifactId>
     <version>1.0</version>
+    <packaging>jar</packaging>
 
     <properties>
         <junit.jupiter.version>5.3.1</junit.jupiter.version>
@@ -18,8 +19,10 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
+
 
     <build>
         <finalName>testing-recap</finalName>
@@ -33,6 +36,18 @@
                     <source>${java.version}</source>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.*</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 </project>
